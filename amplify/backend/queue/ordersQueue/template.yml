@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >-
+  {"createdOn":"Windows","createdBy":"Amplify","createdWith":"7.3.6","stackType":"queue-SQS","metadata":{}}
+Parameters:
+  env:
+    Type: String
+Resources:
+  OrderQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      FifoQueue: true
+      ContentBasedDeduplication: true
+      QueueName:
+        Fn::Join:
+          - ''
+          - - orders-queue-
+            - Ref: env
+            - .fifo
+          
+Outputs:
+  QueueURL:
+    Description: URL of new Amazon SQS Queue
+    Value:
+      Ref: OrderQueue
+  QueueARN:
+    Description: ARN of new Amazon SQS Queue
+    Value:
+      Fn::GetAtt:
+        - OrderQueue
+        - Arn
+  QueueName:
+    Description: Name new Amazon SQS Queue
+    Value:
+      Fn::GetAtt:
+        - OrderQueue
+        - QueueName

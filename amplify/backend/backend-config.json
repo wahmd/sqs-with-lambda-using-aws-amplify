@@ -5,5 +5,11 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "queue": {
+    "ordersQueue": {
+      "providerPlugin": "awscloudformation",
+      "service": "SQS"
+    }
   }
 }

@@ -6,5 +6,12 @@ export type AmplifyDependentResourcesAttributes = {
             "Region": "string",
             "LambdaExecutionRole": "string"
         }
+    },
+    "queue": {
+        "ordersQueue": {
+            "QueueURL": "string",
+            "QueueARN": "string",
+            "QueueName": "string"
+        }
     }
 }
