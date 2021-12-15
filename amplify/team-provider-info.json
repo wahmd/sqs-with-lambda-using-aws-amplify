@@ -10,6 +10,14 @@
       "StackName": "amplify-sqsexample-dev-230138",
       "StackId": "arn:aws:cloudformation:us-east-1:790101844276:stack/amplify-sqsexample-dev-230138/0fda5e40-5dd1-11ec-9582-0a5d26e17ecd",
       "AmplifyAppId": "d2arr7aupc4xmz"
+    },
+    "categories": {
+      "function": {
+        "handleOrder": {
+          "deploymentBucketName": "amplify-sqsexample-dev-230138-deployment",
+          "s3Key": "amplify-builds/handleOrder-52445453584537702b45-build.zip"
+        }
+      }
     }
   }
 }

@@ -1,1 +1,9 @@
-{}
+{
+  "function": {
+    "handleOrder": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  }
+}
