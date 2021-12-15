@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgModule } from '@angular/core';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -8,7 +8,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    /* configure app with AmplifyUIAngularModule */
+    AmplifyUIAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]
