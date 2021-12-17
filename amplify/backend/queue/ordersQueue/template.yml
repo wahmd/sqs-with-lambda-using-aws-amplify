@@ -16,7 +16,25 @@ Resources:
           - - orders-queue-
             - Ref: env
             - .fifo
-          
+            
+  SQSPolicy:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      Queues:
+        - Ref: OrderQueue
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action:
+              - SQS:SendMessage
+              - SQS:ReceiveMessage
+              - SQS:DeleteMessage
+              - SQS:GetQueueAttributes
+            Resource:
+              Fn::GetAtt:
+                - OrderQueue
+                - Arn       
 Outputs:
   QueueURL:
     Description: URL of new Amazon SQS Queue
