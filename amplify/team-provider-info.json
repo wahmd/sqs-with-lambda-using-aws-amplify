@@ -15,7 +15,7 @@
       "function": {
         "handleOrder": {
           "deploymentBucketName": "amplify-sqsexample-dev-230138-deployment",
-          "s3Key": "amplify-builds/handleOrder-52445453584537702b45-build.zip"
+          "s3Key": "amplify-builds/handleOrder-3943642b516e4c707547-build.zip"
         }
       }
     }
