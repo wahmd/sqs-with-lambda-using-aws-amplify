@@ -1,0 +1,5 @@
+{
+    "queueordersQueueQueueARN": {
+        "Fn::GetAtt": ["ordersQueue", "Outputs.QueueARN"]
+    }
+}
