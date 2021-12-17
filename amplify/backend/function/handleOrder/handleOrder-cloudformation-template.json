@@ -163,23 +163,21 @@
                   }
                 ]
               }
-            },
-            {
-              "LambdaFunctionSQSMapping": {
-                "Type": "AWS::Lambda::EventSourceMapping",
-                "Properties": {
-                  "BatchSize": 1,
-                  "Enabled": true,
-                  "EventSourceArn": {
-                    "Ref": "queueordersQueueQueueARN"
-                  },
-                  "FunctionName": {
-                    "Ref": "LambdaFunction"
-                  }
-                }
-              }
             }
           ]
+        }
+      }
+    },
+    "LambdaFunctionSQSMapping": {
+      "Type": "AWS::Lambda::EventSourceMapping",
+      "Properties": {
+        "BatchSize": 1,
+        "Enabled": true,
+        "EventSourceArn": {
+          "Ref": "queueordersQueueQueueARN"
+        },
+        "FunctionName": {
+          "Ref": "LambdaFunction"
         }
       }
     }
