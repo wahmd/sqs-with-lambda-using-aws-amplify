@@ -3,7 +3,14 @@
     "handleOrder": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
+      "service": "Lambda",
+      "dependsOn": [
+        { 
+          "category": "queue",
+          "resourceName": "ordersQueue",
+          "attributes": ["QueueARN"]
+        }
+      ]
     }
   },
   "queue": {
