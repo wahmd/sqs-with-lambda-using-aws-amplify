@@ -222,7 +222,9 @@ Outputs:
 }
 ```
 
-- Now save the changes & do `amplify push` again to have queue on cloud. 
+- Now save the changes
+- Let the CLI know about our custom category and resource by checking out the current environment. `amplify env checkout <env-name>`
+- Do `amplify push` again to have queue on cloud. 
 - We can see our queue on console
  <img src="https://user-images.githubusercontent.com/74547936/146829784-953d4425-5bda-4c65-a96f-b78a49dfa937.png" width="900">
 - If everything is pushed on cloud with not issues, you can move to the next part.
