@@ -86,7 +86,7 @@ This `backend` folder containes all resources. So, if we were to add another (cu
 
 # Adding the SQS fifo Queue
 - Create a new folder inside the `backend` folder and name it to `queue`. ('queue' is not a reserved word, you can name anything but you need to update in other files as well -explain later in the tutorial ). **This is Category**
-- Create a folder and name it to `orderQueue` (**this is resource (queue)**)
+- Create a folder and name it to `ordersQueue` (**this is resource (queue)**)
 - Any resource folder must have these two files: 
   - `template.yml`
   - `parameters.json`
